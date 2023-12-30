@@ -1,0 +1,28 @@
+3.Remove Duplicates from Sorted Array
+
+
+CODE:
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        l=1
+        r=1
+        while r<len(nums):
+            if nums[r]!=nums[r-1]:
+                nums[l]=nums[r]
+                r+=1
+                l+=1
+            else:
+                r+=1
+        return l
+        
+
+OUTPUT:
+
+Input
+nums =
+[1,1,2]
+Output
+[1,2]
+
+l=5
