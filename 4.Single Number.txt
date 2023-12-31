@@ -1,0 +1,27 @@
+4.Single Number
+
+CODE:
+
+class Solution(object):
+    def singleNumber(self, nums):
+        d={}
+        for i in nums:
+            if i not in d:
+                d[i]=1
+            else:
+                del d[i]
+        return list(d.keys())[0]
+
+
+OUTPUT:
+
+Input: nums = [2,2,1]
+Output: 1
+Example 2:
+
+Input: nums = [4,1,2,1,2]
+Output: 4
+Example 3:
+
+Input: nums = [1]
+Output: 1
