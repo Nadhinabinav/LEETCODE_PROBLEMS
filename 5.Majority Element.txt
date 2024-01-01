@@ -1,0 +1,17 @@
+5.Majority Element
+
+
+CODE:
+
+class Solution(object):
+    def majorityElement(self, nums):
+        n=sorted(nums)
+        return n[len(nums)//2]
+
+OUTPUT:
+
+Input
+nums =
+[3,2,3]
+Output
+3
