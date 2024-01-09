@@ -1,0 +1,45 @@
+12.Word Pattern
+
+
+CODE:
+
+class Solution(object):
+    def wordPattern(self, pattern, s):
+        words=s.split()
+        if len(pattern)!=len(words):
+            return False
+        ctow={}
+        wtoc={}
+        for i in range(0,len(words)):
+            if pattern[i] not in ctow:
+                ctow[pattern[i]]=words[i]
+            elif pattern[i] in ctow:
+                value=ctow[pattern[i]]
+                if value==words[i]:
+                    continue
+                else:
+                    return False
+            if words[i] not in wtoc:
+                wtoc[words[i]]=pattern[i]
+            elif words[i] in wtoc:
+                value=wtoc[words[i]]
+                if value==pattern[i]:
+                    continue
+                else:
+                    return False
+        return True
+
+OUTPUT:
+
+Example 1:
+
+Input: pattern = "abba", s = "dog cat cat dog"
+Output: true
+Example 2:
+
+Input: pattern = "abba", s = "dog cat cat fish"
+Output: false
+Example 3:
+
+Input: pattern = "aaaa", s = "dog cat cat dog"
+Output: false
