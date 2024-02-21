@@ -1,0 +1,25 @@
+45.Defanging an IP Address
+
+CODE:
+
+class Solution(object):
+    def defangIPaddr(self, address):
+        defanged_address = ""
+        for char in address:
+            if char == '.':
+                defanged_address += '[.]'
+            else:
+                defanged_address += char
+        return defanged_address
+
+
+OUTPUT:
+
+Example 1:
+
+Input: address = "1.1.1.1"
+Output: "1[.]1[.]1[.]1"
+Example 2:
+
+Input: address = "255.100.50.0"
+Output: "255[.]100[.]50[.]0"
