@@ -1,0 +1,24 @@
+46.Jewels and Stones
+
+CODE:
+
+class Solution(object):
+    def numJewelsInStones(self, jewels, stones):
+        count=0
+        jewels_set=set(jewels)
+        for i in stones:
+            if i in jewels_set:
+                count+=1
+        return count
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+Example 2:
+
+Input: jewels = "z", stones = "ZZ"
+Output: 0
