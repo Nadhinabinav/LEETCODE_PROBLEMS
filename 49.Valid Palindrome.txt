@@ -1,0 +1,26 @@
+49.Valid Palindrome
+
+CODE:
+
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        z=""
+        for i in s:
+            if i.isalnum():
+                z+=i
+        return z.lower()==z[::-1].lower()
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "A man, a plan, a canal: Panama"
+Output: true
+Explanation: "amanaplanacanalpanama" is a palindrome.
+Example 2:
+
+Input: s = "race a car"
+Output: false
+Explanation: "raceacar" is not a palindrome.
