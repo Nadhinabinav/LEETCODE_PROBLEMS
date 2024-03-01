@@ -1,0 +1,24 @@
+53.Check If Two String Arrays are Equivalent
+
+CODE:
+
+class Solution(object):
+    def arrayStringsAreEqual(self, word1, word2):
+        word1="".join(word1)
+        word2="".join(word2)
+        if word1==word2:
+            return 1
+        return 0
+
+        
+OUTPUT:
+
+Example 1:
+
+Input: word1 = ["ab", "c"], word2 = ["a", "bc"]
+Output: true
+
+Example 2:
+
+Input: word1 = ["a", "cb"], word2 = ["ab", "c"]
+Output: false
