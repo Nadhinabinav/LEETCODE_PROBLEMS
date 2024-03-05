@@ -1,0 +1,34 @@
+55.Keyboard Row
+
+CODE:
+
+class Solution(object):
+    def findWords(self, words):
+        a="qwertyuiop"
+        b="asdfghjkl"
+        c="zxcvbnm"
+        res = []
+        for i in words:
+            lower1=i.lower()
+            if len(set(a+lower1)) == len(a) or len(set(b+lower1)) == len(b) or len(set(c+lower1)) == len(c):
+                res.append(i)
+        return res
+
+
+            
+ OUTPUT:
+
+
+Example 1:
+
+Input: words = ["Hello","Alaska","Dad","Peace"]
+Output: ["Alaska","Dad"]
+Example 2:
+
+Input: words = ["omk"]
+Output: []
+Example 3:
+
+Input: words = ["adsdf","sfd"]
+Output: ["adsdf","sfd"]
+
