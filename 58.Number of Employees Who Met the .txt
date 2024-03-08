@@ -1,0 +1,24 @@
+58.Number of Employees Who Met the Target
+
+CODE:
+
+class Solution(object):
+    def numberOfEmployeesWhoMetTarget(self, hours, target):
+        cnt = 0
+        for i in hours:
+            if i >= target:
+                cnt += 1
+        return cnt
+
+
+OUTPUT:
+
+Example 1:
+
+Input: hours = [0,1,2,3,4], target = 2
+Output: 3
+
+Example 2:
+
+Input: hours = [5,1,4,2,2], target = 6
+Output: 0
