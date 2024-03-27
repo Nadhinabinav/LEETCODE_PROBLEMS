@@ -1,0 +1,34 @@
+61.Sort Colors
+
+CODE:
+
+class Solution(object):
+    def sortColors(self, nums):
+        lo = 0
+        hi = len(nums)-1
+        mid = 0
+        a=[]
+        while mid <= hi:
+            if nums[mid] == 0:
+                nums[lo], nums[mid] = nums[mid], nums[lo]
+                lo = lo + 1
+                mid = mid + 1
+            elif nums[mid] == 1:
+                mid = mid + 1
+            else:
+                nums[mid], nums[hi] = nums[hi], nums[mid]
+                hi = hi - 1
+        return a
+            
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: nums = [2,0,2,1,1,0]
+Output: [0,0,1,1,2,2]
+Example 2:
+
+Input: nums = [2,0,1]
+Output: [0,1,2]
