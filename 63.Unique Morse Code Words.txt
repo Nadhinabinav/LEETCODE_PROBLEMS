@@ -1,0 +1,27 @@
+63.Unique Morse Code Words
+
+CODE:
+
+class Solution(object):
+    def uniqueMorseRepresentations(self, words):
+        morse_code=[".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."]
+        res=[]
+        for word in words:
+            morse=''
+            for char in word:
+                morse+=morse_code[ord(char)-97]
+            if morse not in res:
+                res.append(morse)
+        return (len(res))
+
+OUTPUT:
+
+Example 1:
+
+Input: words = ["gin","zen","gig","msg"]
+Output: 2
+
+Example 2:
+
+Input: words = ["a"]
+Output: 1
