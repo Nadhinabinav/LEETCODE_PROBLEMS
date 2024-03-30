@@ -1,0 +1,33 @@
+64.Split a String in Balanced Strings
+
+CODE:
+
+class Solution(object):
+    def balancedStringSplit(self, s):
+        match=0
+        char=0
+        for i in s:
+            if i =='R':
+                char+=1
+            if i=='L':
+                char-=1
+            if char==0:
+                match+=1
+        return match
+
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "RLRRLLRLRL"
+Output: 4
+Explanation: s can be split into "RL", "RRLL", "RL", "RL", each substring contains same number of 'L' and 'R'.
+
+Example 2:
+Input: s = "RLRRRLLRLL"
+Output: 2
+
+Example 3:
+Input: s = "LLLLRRRR"
+Output: 1
