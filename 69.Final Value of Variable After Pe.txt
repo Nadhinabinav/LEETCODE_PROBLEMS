@@ -1,0 +1,26 @@
+69.Final Value of Variable After Performing Operations
+
+CODE:
+
+class Solution(object):
+    def finalValueAfterOperations(self, operations):
+        c=0
+        for i in operations:
+            if (i=='++X'or i=='X++'):
+                c=c+1
+            elif(i=='--X' or i=='X--'):
+                c=c-1
+        return c
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: operations = ["--X","X++","X++"]
+Output: 1
+
+Example 2:
+
+Input: operations = ["++X","++X","X++"]
+Output: 3
