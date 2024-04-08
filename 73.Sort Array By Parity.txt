@@ -1,0 +1,28 @@
+73.Sort Array By Parity
+
+CODE:
+
+class Solution(object):
+    def sortArrayByParity(self, nums):
+        e=[]
+        o=[]
+        for i in nums:
+            if i%2==0:
+                e.append(i)
+            else:
+                o.append(i)
+        return(e+o)
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: nums = [3,1,2,4]
+Output: [2,4,3,1]
+
+Example 2:
+
+Input: nums = [0]
+Output: [0]
