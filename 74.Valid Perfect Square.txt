@@ -1,0 +1,22 @@
+74.Valid Perfect Square
+
+CODE:
+
+class Solution(object):
+    def isPerfectSquare(self, num):
+        sqrt_num = num ** 0.5  
+        if sqrt_num.is_integer():
+            return True
+        return False
+
+OUTPUT:
+
+Example 1:
+
+Input: num = 16
+Output: true
+
+Example 2:
+
+Input: num = 14
+Output: false
