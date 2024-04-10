@@ -1,0 +1,23 @@
+75. Length of Last Word
+
+CODE:
+
+class Solution(object):
+    def lengthOfLastWord(self, s):
+        s=s.strip()
+        a=s.split()
+        last=len(a[-1])
+        return last
+
+OUTPUT:
+
+
+Example 1:
+
+Input: s = "Hello World"
+Output: 5
+
+Example 2:
+
+Input: s = "   fly me   to   the moon  "
+Output: 4
