@@ -1,0 +1,41 @@
+84.Harshad Number
+
+CODE:
+
+int sumOfTheDigitsOfHarshadNumber(int x) {
+    int a,sum=0,original_x=x;
+    while(x>0){
+        a=x%10;
+        sum+=a;
+        x=x/10;
+        
+    }
+    if(original_x%sum==0){
+        return sum;
+     }
+     else{
+        return -1;
+     }
+}
+
+
+
+
+OUTPUT:
+
+Example 1:
+
+Input: x = 18
+
+Output: 9
+
+Explanation:
+
+The sum of digits of x is 9. 18 is divisible by 9. So 18 is a Harshad number and the answer is 9.
+
+Example 2:
+
+Input: x = 23
+
+Output: -1
+
