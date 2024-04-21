@@ -1,0 +1,39 @@
+86.Sum of Unique Elements
+
+CODE:
+
+class Solution(object):
+    def sumOfUnique(self, nums):
+        s=0
+        a={}
+        for i in nums:
+            if i in a:
+                a[i]+=1
+            else:
+                a[i]=1
+        for num,count in a.items():
+            if count==1:
+                s+=num
+        return s
+
+
+
+
+
+OUTPUT:
+
+
+Example 1:
+
+Input: nums = [1,2,3,2]
+Output: 4
+
+Example 2:
+
+Input: nums = [1,1,1,1,1]
+Output: 0
+
+Example 3:
+
+Input: nums = [1,2,3,4,5]
+Output: 15
