@@ -1,0 +1,36 @@
+89.Student Attendance Record I
+
+
+CODE:
+
+class Solution(object):
+    def checkRecord(self, s):
+        absent_count = 0
+        late_streak = 0
+    
+        for i in range(len(s)):
+            if s[i] == 'A':
+                absent_count += 1
+                if absent_count >= 2:
+                    return False
+     
+            if s[i] == 'L':
+                late_streak += 1
+                if late_streak >= 3:
+                    return False
+            else:
+                late_streak = 0 
+    
+        return True
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "PPALLP"
+Output: true
+
+Example 2:
+
+Input: s = "PPALLL"
+Output: false
