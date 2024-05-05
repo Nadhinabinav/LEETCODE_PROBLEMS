@@ -1,0 +1,27 @@
+90.Ant on the Boundary
+
+CODE:
+
+class Solution(object):
+    def returnToBoundaryCount(self, nums):
+        b=0
+        c=0
+        for i in nums:
+            b+=i
+            if b==0:
+                c=c+1
+        return c
+        
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: nums = [2,3,-5]
+Output: 1
+
+Example 2:
+
+Input: nums = [3,2,-3,-4]
+Output: 0
