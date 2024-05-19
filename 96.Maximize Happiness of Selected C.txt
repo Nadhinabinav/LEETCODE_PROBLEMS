@@ -1,0 +1,31 @@
+96.Maximize Happiness of Selected Children
+
+CODE:
+
+class Solution(object):
+    def maximumHappinessSum(self, happiness, k):
+        happiness=sorted(happiness)
+        ans=0
+        ind=0
+        for i in range(len(happiness)-1,len(happiness)-k-1,-1):
+            ans+=max(happiness[i]-ind,0)
+            ind+=1
+        return ans
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: happiness = [1,2,3], k = 2
+Output: 4
+
+Example 2:
+
+Input: happiness = [1,1,1,1], k = 2
+Output: 1
+
+Example 3:
+
+Input: happiness = [2,3,4,5], k = 1
+Output: 5
