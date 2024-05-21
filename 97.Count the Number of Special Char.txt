@@ -1,0 +1,36 @@
+97.Count the Number of Special Characters I
+
+CODE:
+
+class Solution(object):
+    def numberOfSpecialChars(self, word):
+        upper=set()
+        lower=set()
+        for i in word:
+            if i.isupper():
+                upper.add(i.lower())
+            else:
+                lower.add(i.lower())
+        return len(upper & lower)
+
+OUTPUT:
+
+Example 1:
+
+Input: word = "aaAbcBC"
+
+Output: 3
+
+
+Example 2:
+
+Input: word = "abc"
+
+Output: 0
+
+
+Example 3:
+
+Input: word = "abBCab"
+
+Output: 1
