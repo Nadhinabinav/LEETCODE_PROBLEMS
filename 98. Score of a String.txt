@@ -1,0 +1,26 @@
+98. Score of a String
+
+CODE:
+
+class Solution(object):
+    def scoreOfString(self, s):
+        score = 0
+        for i in range(len(s) - 1):
+            score += abs(ord(s[i]) - ord(s[i+1]))
+        return score
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "hello"
+
+Output: 13
+
+Example 2:
+
+Input: s = "zaz"
+
+Output: 50
