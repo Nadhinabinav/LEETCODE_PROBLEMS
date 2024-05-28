@@ -1,0 +1,32 @@
+100.Assign Cookies
+
+CODE:
+
+class Solution(object):
+    def findContentChildren(self, g, s):
+        r=max(len(g),len(s))
+        g=sorted(g)
+        s=sorted(s)
+        c=0
+        i=0
+        j=0
+        while i <len(g) and j<len(s):
+            if (s[j]>=g[i]):
+                c+=1
+                i+=1
+            j+=1
+        return c
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: g = [1,2,3], s = [1,1]
+Output: 1
+
+Example 2:
+
+Input: g = [1,2], s = [1,2,3]
+Output: 2
