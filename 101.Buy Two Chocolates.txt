@@ -1,0 +1,25 @@
+101.Buy Two Chocolates
+
+CODE:
+
+class Solution(object):
+    def buyChoco(self, prices, money):
+        prices=sorted(prices)
+        for i in range(len(prices) -1):
+            if  (prices[i] + prices[i+1])<=money:
+                return money-(prices[i] + prices[i+1])
+            else:
+                return money
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: prices = [1,2,2], money = 3
+Output: 0
+
+Example 2:
+
+Input: prices = [3,2,3], money = 3
+Output: 3
