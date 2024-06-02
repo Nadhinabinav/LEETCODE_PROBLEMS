@@ -1,0 +1,20 @@
+103.Detect Capital
+
+CODE:
+
+class Solution(object):
+    def detectCapitalUse(self, word):
+        if word.isupper() or word.islower() or (word[:1].isupper() and word[1:].islower()):
+            return True
+        return False
+
+OUTPUT:
+
+Example 1:
+
+Input: word = "USA"
+Output: true
+Example 2:
+
+Input: word = "FlaG"
+Output: false
