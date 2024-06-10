@@ -1,0 +1,24 @@
+107.Counting Words With a Given Prefix
+
+CODE:
+
+class Solution(object):
+    def prefixCount(self, words, pref):
+        c=0
+        for i in range(len(words)):
+            if (words[i].startswith(pref)):
+                c+=1
+        return c
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: words = ["pay","attention","practice","attend"], pref = "at"
+Output: 2
+
+Example 2:
+
+Input: words = ["leetcode","win","loops","success"], pref = "code"
+Output: 0
