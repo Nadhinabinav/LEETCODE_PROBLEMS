@@ -1,0 +1,28 @@
+108.Check If a Word Occurs As a Prefix of Any Word in a Sentence
+
+CODE:
+
+class Solution(object):
+    def isPrefixOfWord(self, sentence, searchWord):
+        n=sentence.split(' ')
+        for i in range(len(n)):
+            if (n[i].startswith(searchWord)):
+                return i+1
+        return -1
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: sentence = "i love eating burger", searchWord = "burg"
+Output: 4
+
+Example 2:
+Input: sentence = "this problem is an easy problem", searchWord = "pro"
+Output: 2
+
+Example 3:
+Input: sentence = "i am tired", searchWord = "you"
+Output: -1
