@@ -1,0 +1,29 @@
+241.Water Mixing
+
+CODE:
+
+for testcases in range(int(input())):
+    a,b,x,y=map(int,input().split())
+    if(a>b):
+        need=a-b 
+        if(y>=need):print("YES")
+        else: print("NO")
+    elif b>a :
+        need=b-a 
+        if(x>=need): print("YES")
+        else: print("NO")
+    else : print("YES")
+
+OUTPUT:
+
+Sample Input
+4
+24 25 2 0
+37 37 2 9
+30 20 10 9
+30 31 0 20
+Your Output
+YES
+YES
+NO
+NO
