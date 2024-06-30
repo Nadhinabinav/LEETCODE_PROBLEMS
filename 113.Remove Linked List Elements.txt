@@ -1,0 +1,35 @@
+113.Remove Linked List Elements
+
+CODE:
+
+struct ListNode* removeElements(struct ListNode* head, int val) {
+    struct ListNode dummy;
+    dummy.next = head;
+    struct ListNode *current = &dummy;
+
+    while (current && current->next) {
+        if (current->next->val == val) {
+            struct ListNode *temp = current->next;
+            current->next = current->next->next;
+            free(temp);
+        } else {
+            current = current->next;
+        }
+    }
+
+    return dummy.next;
+    
+    
+}
+
+OUTPUT:
+
+Example 1:
+
+
+Input: head = [1,2,6,3,4,5,6], val = 6
+Output: [1,2,3,4,5]
+Example 2:
+
+Input: head = [], val = 1
+Output: []
