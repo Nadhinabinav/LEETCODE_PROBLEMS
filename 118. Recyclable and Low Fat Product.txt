@@ -1,0 +1,30 @@
+118. Recyclable and Low Fat Products
+
+CODE:
+
+select product_id
+from products as p
+where p.low_fats='Y' and p.recyclable='Y';
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+Products table:
++-------------+----------+------------+
+| product_id  | low_fats | recyclable |
++-------------+----------+------------+
+| 0           | Y        | N          |
+| 1           | Y        | Y          |
+| 2           | N        | Y          |
+| 3           | Y        | Y          |
+| 4           | N        | N          |
++-------------+----------+------------+
+Output: 
++-------------+
+| product_id  |
++-------------+
+| 1           |
+| 3           |
++-------------+
