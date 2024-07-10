@@ -1,0 +1,37 @@
+119.Customers Who Never Order
+
+CODE:
+
+select c.name as Customers from Customers as c 
+left join Orders as o
+on c.id=o.CustomerId
+where o.id is null;
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+Customers table:
++----+-------+
+| id | name  |
++----+-------+
+| 1  | Joe   |
+| 2  | Henry |
+| 3  | Sam   |
+| 4  | Max   |
++----+-------+
+Orders table:
++----+------------+
+| id | customerId |
++----+------------+
+| 1  | 3          |
+| 2  | 1          |
++----+------------+
+Output: 
++-----------+
+| Customers |
++-----------+
+| Henry     |
+| Max       |
++-----------+
