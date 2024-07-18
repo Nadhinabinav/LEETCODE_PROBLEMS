@@ -1,0 +1,32 @@
+127. Find Followers Count
+
+
+CODE:
+
+select user_id ,count(distinct follower_id) as followers_count
+from Followers
+group by user_id;
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+Followers table:
++---------+-------------+
+| user_id | follower_id |
++---------+-------------+
+| 0       | 1           |
+| 1       | 0           |
+| 2       | 0           |
+| 2       | 1           |
++---------+-------------+
+Output: 
++---------+----------------+
+| user_id | followers_count|
++---------+----------------+
+| 0       | 1              |
+| 1       | 1              |
+| 2       | 2              |
++---------+----------------+
+
