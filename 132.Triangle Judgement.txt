@@ -1,0 +1,31 @@
+132.Triangle Judgement
+
+CODE:
+
+
+select x,y,z ,
+case when (x+y>z and y+z>x and x+z>y) then 'Yes'
+else 'No' 
+end as triangle
+from Triangle
+
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+Triangle table:
++----+----+----+
+| x  | y  | z  |
++----+----+----+
+| 13 | 15 | 30 |
+| 10 | 20 | 15 |
++----+----+----+
+Output: 
++----+----+----+----------+
+| x  | y  | z  | triangle |
++----+----+----+----------+
+| 13 | 15 | 30 | No       |
+| 10 | 20 | 15 | Yes      |
++----+----+----+----------+
