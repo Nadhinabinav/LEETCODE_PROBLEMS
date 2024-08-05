@@ -1,0 +1,40 @@
+140.Kth Distinct String in an Array
+
+CODE:
+
+class Solution:
+    def kthDistinct(self, arr: List[str], k: int) -> str:
+        d={}
+        r=[]
+        for i in arr:
+            if i  in d:
+                d[i]+=1
+            else:
+                d[i]=1
+        for key,value in d.items():
+            if value==1:
+                r.append(key)
+        if len(r)>=k:
+            return r[k-1]
+        else:
+            return ""
+
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: arr = ["d","b","c","b","c","a"], k = 2
+Output: "a"
+
+Example 2:
+
+Input: arr = ["aaa","aa","a"], k = 1
+Output: "aaa"
+
+Example 3:
+
+Input: arr = ["a","b","a"], k = 3
+Output: ""
