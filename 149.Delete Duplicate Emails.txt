@@ -1,0 +1,31 @@
+149.Delete Duplicate Emails
+
+CODE:
+
+delete from Person
+where id not in
+    (select min(id)
+    from Person
+    group by email)
+
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+Person table:
++----+------------------+
+| id | email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
+| 3  | john@example.com |
++----+------------------+
+Output: 
++----+------------------+
+| id | email            |
++----+------------------+
+| 1  | john@example.com |
+| 2  | bob@example.com  |
++----+------------------+
