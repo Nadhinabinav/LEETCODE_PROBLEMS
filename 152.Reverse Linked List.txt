@@ -1,0 +1,21 @@
+152.Reverse Linked List
+
+CODE:
+
+
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prv=None
+        curr=head
+        while curr:
+            nxt = curr.next  
+            curr.next = prv  
+            prv = curr      
+            curr = nxt
+            
+        return prv
+
+OUTPUT:
+
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
