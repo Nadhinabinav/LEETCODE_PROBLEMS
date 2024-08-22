@@ -1,0 +1,36 @@
+154.Number Complement
+
+CODE:
+
+class Solution:
+    def findComplement(self, num: int) -> int:
+        binary_str =""
+        r=""
+        while num > 0:
+            remainder = num % 2  
+            binary_str = str(remainder) + binary_str  
+            num = num // 2  
+        for i in binary_str:
+            if i =='1':
+                i="0"
+                r+=i
+            else:
+                i="1"
+                r+=i
+        integer_value = int(r, 2)  
+        return(integer_value)
+
+
+
+OUTPUT:
+
+Example 1:
+
+Input: num = 5
+Output: 2
+
+
+Example 2:
+
+Input: num = 1
+Output: 0
