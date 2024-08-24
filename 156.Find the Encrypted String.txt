@@ -1,0 +1,25 @@
+156.Find the Encrypted String
+
+CODE:
+
+class Solution:
+    def getEncryptedString(self, s: str, k: int) -> str:
+        encry=[]
+        for i in range(0,len(s)):
+            new_pos=(i+k)%len(s)
+            encry.append(s[new_pos])
+        return "".join(encry)
+        
+OUTPUT:
+
+Example 1:
+
+Input: s = "dart", k = 3
+
+Output: "tdar"
+
+Example 2:
+
+Input: s = "aaa", k = 1
+
+Output: "aaa"
