@@ -1,0 +1,29 @@
+157.Maximum Number of Operations With the Same Score I
+
+CODE:
+
+class Solution:
+    def maxOperations(self, nums: List[int]) -> int:
+        s=nums[0] + nums[1]
+        r=1
+        for i in range(2,len(nums),2):
+            if i+1<len(nums):
+                ns=nums[i]+nums[i+1]
+                if ns==s:
+                    r+=1
+                else:
+                    break
+        return r
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: nums = [3,2,1,4,5]
+Output: 2
+
+Example 2:
+
+Input: nums = [3,2,6,1,4]
+Output: 1
