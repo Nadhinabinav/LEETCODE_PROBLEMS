@@ -1,0 +1,30 @@
+159.Sum of Digits of String After Convert
+
+CODE:
+
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        mapp={letter : str(index+1) for index, letter in enumerate(string.ascii_lowercase)}
+        con=[mapp[c] for c in s]
+        num=''.join(con)
+        while k>0:
+            number=0
+            for c in num:
+                number+=int(c)
+            num=str(number)
+            k-=1
+        return int(num)
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "iiii", k = 1
+Output: 36
+
+Example 2:
+
+Input: s = "leetcode", k = 2
+Output: 6
