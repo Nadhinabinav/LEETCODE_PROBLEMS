@@ -1,0 +1,27 @@
+160.Nim Game
+
+CODE:
+
+class Solution:
+    def canWinNim(self, n: int) -> bool:
+        if n%4==0:
+            return False
+        else:
+            return True
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: n = 4
+Output: false
+
+Example 2:
+
+Input: n = 1
+Output: true
+Example 3:
+
+Input: n = 2
+Output: true
