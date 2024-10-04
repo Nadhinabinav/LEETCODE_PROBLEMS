@@ -1,0 +1,30 @@
+168.Minimum Number of Chairs in a Waiting Room
+
+CODE:
+
+class Solution:
+    def minimumChairs(self, s: str) -> int:
+        r=0
+        c=0
+        for i in s:
+            if i =='E':
+                c+=1
+            else:
+                c-=1
+            r=max(r,c)
+        return r
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "EEEEEEE"
+
+Output: 7
+
+
+Example 2:
+
+Input: s = "ELELEEL"
+
+Output: 2
