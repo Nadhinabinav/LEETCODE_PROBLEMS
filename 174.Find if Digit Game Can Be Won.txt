@@ -1,0 +1,36 @@
+174.Find if Digit Game Can Be Won
+
+CODE:
+
+class Solution:
+    def canAliceWin(self, nums: List[int]) -> bool:
+        s,d=0,0
+        for i in nums:
+            if i<10:
+                s+=i
+            else:
+                d+=i
+        return d>s or s>d
+        
+
+
+OUTPUT:
+
+Example 1:
+
+Input: nums = [1,2,3,4,10]
+
+Output: false
+
+Example 2:
+
+Input: nums = [1,2,3,4,5,14]
+
+Output: true
+
+
+Example 3:
+
+Input: nums = [5,5,5,25]
+
+Output: true
