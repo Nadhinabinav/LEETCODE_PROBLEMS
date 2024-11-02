@@ -1,0 +1,29 @@
+176. Sum Multiples
+
+CODE:
+
+class Solution:
+    def sumOfMultiples(self, n: int) -> int:
+        s=0
+        for i in range(1,n+1):
+            if (i%3==0 or i%5==0 or i%7==0):
+                s+=i
+        return s
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: n = 7
+Output: 21
+
+Example 2:
+
+Input: n = 10
+Output: 40
+
+Example 3:
+
+Input: n = 9
+Output: 30
