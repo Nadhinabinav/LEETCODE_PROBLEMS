@@ -1,0 +1,29 @@
+177.Circular Sentence
+
+CODE:
+
+class Solution:
+    def isCircularSentence(self, sentence: str) -> bool:
+        for i in range(0,len(sentence)):
+            if sentence[i]==" ":
+                if sentence[i-1]!=sentence[i+1]:
+                    return False
+        return sentence[0]==sentence[-1]
+
+OUTPUT:
+
+Example 1:
+
+Input: sentence = "leetcode exercises sound delightful"
+Output: true
+
+The sentence is circular.
+Example 2:
+
+Input: sentence = "eetcode"
+Output: true
+
+Example 3:
+
+Input: sentence = "Leetcode is cool"
+Output: false
