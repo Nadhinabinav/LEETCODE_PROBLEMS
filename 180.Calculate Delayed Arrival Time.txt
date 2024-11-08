@@ -1,0 +1,25 @@
+180.Calculate Delayed Arrival Time
+
+CODE:
+
+class Solution:
+    def findDelayedArrivalTime(self, arrivalTime: int, delayedTime: int) -> int:
+        if(arrivalTime + delayedTime)<24:
+            return arrivalTime + delayedTime
+        elif (arrivalTime + delayedTime)>24:
+            return (arrivalTime + delayedTime)-24
+        else:
+            return 0
+
+
+OUTPUT:
+
+Example 1:
+
+Input: arrivalTime = 15, delayedTime = 5 
+Output: 20 
+
+Example 2:
+
+Input: arrivalTime = 13, delayedTime = 11
+Output: 0
