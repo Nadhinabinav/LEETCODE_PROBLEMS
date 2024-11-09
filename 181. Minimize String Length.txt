@@ -1,0 +1,29 @@
+181. Minimize String Length
+
+CODE:
+
+class Solution:
+    def minimizedStringLength(self, s: str) -> int:
+        a=[]
+        c=0
+        for i in s:
+            if i not in a:
+                a.append(i)
+                c+=1
+            
+        return c
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "aaabc"
+
+Output: 3
+
+Example 2:
+
+Input: s = "cbbd"
+
+Output: 3
