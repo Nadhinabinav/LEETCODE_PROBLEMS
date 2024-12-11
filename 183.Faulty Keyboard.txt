@@ -1,0 +1,26 @@
+183.Faulty Keyboard
+
+CODE:
+
+class Solution:
+    def finalString(self, s: str) -> str:
+        r=''
+        for i in s:
+            if i=='i':
+                r=''.join(reversed(r))
+            else:
+                r+=i
+        return r
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "string"
+Output: "rtsng"
+
+Example 2:
+
+Input: s = "poiinter"
+Output: "ponter"
