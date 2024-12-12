@@ -1,0 +1,28 @@
+184.Take Gifts From the Richest Pile
+
+CODE:
+
+class Solution:
+    def pickGifts(self, gifts: List[int], k: int) -> int:
+        import math
+        while k>0:
+            max_element=max(gifts)
+            sqrt_max = math.isqrt(max_element)
+            max_index = gifts.index(max_element)
+            gifts[max_index] = sqrt_max
+            k-=1
+        return sum(gifts)
+        
+        
+
+
+OUTPUT:
+
+Example 1:
+
+Input: gifts = [25,64,9,4,100], k = 4
+Output: 29
+Example 2:
+
+Input: gifts = [1,1,1,1], k = 4
+Output: 4
