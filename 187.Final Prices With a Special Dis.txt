@@ -1,0 +1,35 @@
+187.Final Prices With a Special Discount in a Shop
+
+CODE:
+
+class Solution:
+    def finalPrices(self, prices: List[int]) -> List[int]:
+        r = []
+        for i in range(len(prices)):
+            discount_applied = False
+            for j in range(i + 1, len(prices)):
+                if prices[j] <= prices[i]:
+                    r.append(prices[i] - prices[j])
+                    discount_applied = True
+                    break
+            if not discount_applied:
+                r.append(prices[i])
+        return r
+
+OUTPUT:
+
+Example 1:
+
+Input: prices = [8,4,6,2,3]
+Output: [4,2,4,2,3]
+
+Example 2:
+
+Input: prices = [1,2,3,4,5]
+Output: [1,2,3,4,5]
+
+Example 3:
+
+Input: prices = [10,1,1,6]
+Output: [9,0,1,6]
+ 
