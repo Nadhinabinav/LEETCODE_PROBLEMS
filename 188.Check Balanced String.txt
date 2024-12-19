@@ -1,0 +1,30 @@
+188.Check Balanced String
+
+CODE:
+
+class Solution:
+    def isBalanced(self, num: str) -> bool:
+        e=0
+        e1=0
+        for i in range(0,len(num)):
+            if(i%2==0):
+                e+=int(num[i])
+            else:
+                e1+=int(num[i])
+        if e==e1:
+            return True
+        return False
+
+OUTPUT:
+
+Example 1:
+
+Input: num = "1234"
+
+Output: false
+
+Example 2:
+
+Input: num = "24123"
+
+Output: true
