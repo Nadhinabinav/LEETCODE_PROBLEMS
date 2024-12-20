@@ -1,0 +1,28 @@
+189. Find the Key of the Numbers
+
+CODE:
+
+class Solution:
+    def generateKey(self, num1: int, num2: int, num3: int) -> int:
+        str1=f"{num1:04}"
+        str2=f"{num2:04}"
+        str3=f"{num3:04}"
+        key=""
+        for i in range(0,4):
+            min_dig=min(str1[i],str2[i],str3[i])
+            key+=min_dig
+        return int(key)
+
+OUTPUT:
+
+Example 1:
+
+Input: num1 = 1, num2 = 10, num3 = 1000
+
+Output: 0
+
+Example 2:
+
+Input: num1 = 987, num2 = 879, num3 = 798
+
+Output: 777
