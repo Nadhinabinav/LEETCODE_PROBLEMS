@@ -1,0 +1,23 @@
+193. Reverse Words in a String III
+
+CODE:
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s1=s.split()
+        r=""
+        for i in s1:
+            r+=i[::-1]+" "
+        r = r.strip()
+        return r
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "Let's take LeetCode contest"
+Output: "s'teL ekat edoCteeL tsetnoc"
+Example 2:
+
+Input: s = "Mr Ding"
+Output: "rM gniD"
