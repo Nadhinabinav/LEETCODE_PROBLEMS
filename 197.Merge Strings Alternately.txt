@@ -1,0 +1,27 @@
+197.Merge Strings Alternately
+
+CODE:
+
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        s=""
+        r=max(len(word1),len(word2))
+        for i in range(r):
+            if i < len(word1):
+                s+=word1[i]
+            if i < len(word2):
+                s+=word2[i]
+        return s
+
+
+OUTPUT:
+
+Example 1:
+
+Input: word1 = "abc", word2 = "pqr"
+Output: "apbqcr"
+
+Example 2:
+
+Input: word1 = "ab", word2 = "pqrs"
+Output: "apbqrs"
