@@ -1,0 +1,25 @@
+202.Generate Fibonacci Sequence
+
+CODE:
+
+var fibGenerator = function*() {
+    let a = 0, b = 1;
+    while (true) {
+        yield a;
+        [a, b] = [b, a + b];
+    }
+    
+};
+
+
+OUTPUT:
+
+Example 1:
+
+Input: callCount = 5
+Output: [0,1,1,2,3]
+
+Example 2:
+
+Input: callCount = 0
+Output: []
