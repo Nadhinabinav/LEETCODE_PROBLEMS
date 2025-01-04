@@ -1,0 +1,32 @@
+203.Harshad Number
+
+CODE:
+
+
+class Solution:
+    def sumOfTheDigitsOfHarshadNumber(self, x: int) -> int:
+        x1=x
+        s=0
+        while x >0:
+            s+=x%10
+            x=x//10
+        if x1 % s == 0:
+            return s
+        else:
+            return -1
+
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: x = 18
+
+Output: 9
+
+Example 2:
+
+Input: x = 23
+
+Output: -1
