@@ -1,0 +1,23 @@
+204.Add Two Promises
+
+CODE:
+
+
+var addTwoPromises = async function(promise1, promise2) {
+    const result1 = await promise1;
+    const result2 = await promise2;
+
+    // Return a new promise that resolves with the sum of the two results
+    return result1 + result2;
+    
+};
+
+
+OUTPUT:
+
+Example 1:
+
+Input: 
+promise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)), 
+promise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))
+Output: 7
