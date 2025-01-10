@@ -1,0 +1,29 @@
+205.Find the Child Who Has the Ball After K Seconds
+
+CODE:
+
+class Solution:
+    def numberOfChild(self, n: int, k: int) -> int:
+        p=0
+        d=1
+        for i in range(k):
+            p+=d
+            if p==0 or p==n-1:
+                d*=-1
+        return p
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: n = 3, k = 5
+
+Output: 1
+
+
+Example 2:
+
+Input: n = 5, k = 6
+
+Output: 2
