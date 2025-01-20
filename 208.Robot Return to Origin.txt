@@ -1,0 +1,20 @@
+208.Robot Return to Origin
+
+CODE:
+
+class Solution:
+    def judgeCircle(self, moves: str) -> bool:
+            return moves.count('U') == moves.count('D') and moves.count('L') == moves.count('R')
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: moves = "UD"
+Output: true
+
+Example 2:
+
+Input: moves = "LL"
+Output: false
