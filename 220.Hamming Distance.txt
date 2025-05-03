@@ -1,0 +1,22 @@
+220.Hamming Distance
+
+CODE:
+
+class Solution:
+    def hammingDistance(self, x: int, y: int) -> int:
+        o=x^y
+        r=((bin(o).count('1')))
+        
+        return r
+        
+
+OUTPUT:
+
+Example 1:
+
+Input: x = 1, y = 4
+Output: 2
+Example 2:
+
+Input: x = 3, y = 1
+Output: 1
