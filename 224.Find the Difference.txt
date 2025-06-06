@@ -1,0 +1,21 @@
+224.Find the Difference
+
+CODE:
+
+class Solution:
+    def findTheDifference(self, s: str, t: str) -> str:
+        for char in t:
+            if t.count(char) != s.count(char):
+                return char
+
+OUTPUT:
+
+Example 1:
+
+Input: s = "abcd", t = "abcde"
+Output: "e"
+Explanation: 'e' is the letter that was added.
+Example 2:
+
+Input: s = "", t = "y"
+Output: "y"
